@@ -1,0 +1,66 @@
+/*----------------
+      FONT
+----------------*/
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+/* Appeler la font --> font-family: 'Source Code Pro', monospace; */
+
+body{
+  background-image:url("http://orig08.deviantart.net/584f/f/2011/212/4/9/matrix_wallpaper_by_zero_no_ai_chan-d4283me.gif");
+  font-family: 'Source Code Pro', monospace;
+  background-size: cover;
+  }
+  h3{
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  img{
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+  button{
+    margin: auto;
+    display: block;
+    font-size: 25px;
+    text-transform: uppercase;
+    position: relative;
+    top: 30px;
+  }
+
+.profil{
+  position: relative;
+}
+
+.center{
+  left: 18vw;
+  position: absolute;
+  top: 223px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 3px 4px 1px 0px white;
+  padding: 0 7px 7px 0;
+}
+
+#character_01{
+  float: left;
+  width: 49%;
+  display: inline-block;
+  height: 500px;
+  overflow: hidden;
+  }
+  #character_01 .center {
+    margin-left: 17vw;
+    left: 33px;
+    max-width: 126px;
+  }
+
+
+#character_02{
+  float: right;
+  width: 49%;
+  display: inline-block;
+  height: 500px;
+  overflow: hidden;
+}
