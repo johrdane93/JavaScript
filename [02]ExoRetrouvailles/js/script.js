@@ -1,6 +1,8 @@
 //On a besoin de creer les elements qui vont nous servir à construire notre dialogue
 //Il nous faut, l'image du personne, son nom et des dialogues defilants.
 
+  // console.log('init 01')
+
 //On commence par creer les elements du premiers personnage
 function init(infos){
 
@@ -18,6 +20,8 @@ function init(infos){
   //implementation des elements à integrer :
     //Gestion de l'image
     portrait.src= infos.picture;
+
+
 
     //Affichage du nom
     nom.innerHTML = infos.name;
@@ -55,10 +59,23 @@ function dialogue(){
   if ( index%2 == 0 ) {
     var contexte = document.getElementById('character_02');
     var paroles = data.perso_1.texte;
+    console.log('valeur d\'index:');
   }else{
     var contexte = document.getElementById('character_01');
     var paroles = data.perso_0.texte;
   }
+if (index% 2 == 0)/*defini le nombre de clic avant de changer dimg*/ {
+  var tabImg = data.perso_1; /*defini limg qui doit changer*/
+  var images = document.getElementById('character_02').getElementsByTagName('img');
+  images[0].src = tabImg.picture02 ;
+
+  if (index%4 == 0) {
+    var tabImg = data.perso_1
+    var images = document.getElementById('character_02').getElementsByTagName('img');
+    images[0].src = tabImg.picture03 ;
+  }
+}
+
   var dom = contexte.getElementsByClassName('center'); //--> Renvoie un tableau
   dom[0].innerHTML = paroles[ index%3 ];
   index++;
